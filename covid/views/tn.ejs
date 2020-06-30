@@ -1,0 +1,155 @@
+<%- include("./partials/header.ejs") %>
+
+    <h1 class="heading">Covid19
+        <spanc class="headtn">TAMILNADU</span>
+    </h1>
+    <div>
+        <p class="Time">
+            <% var ldate=sData.TN.meta.last_updated%>
+                <%var ld= Date.parse(ldate)%>
+                    <%var d = new Date(ld);%>
+                        Last updated:
+                        <%=d%>
+        </p>
+    </div>
+
+    <div class="flex-container">
+        <div class="con">
+            <p class="mcon">confirmed</p>
+            <%=JSON.stringify(sData.TN.total.confirmed)%>
+        </div>
+        <div class="rec">
+            <p class="mrec">Recovered</p>
+            <%=JSON.stringify(sData.TN.total.recovered)%>
+        </div>
+        <div class="dec">
+            <p class="mdec">Deceased</p>
+            <%=JSON.stringify(sData.TN.total.deceased)%>
+        </div>
+        <div class="tes">
+            <p class="mtes">Tested</p>
+            <%=JSON.stringify(sData.TN.total.tested)%>
+        </div>
+    </div>
+
+    <%var District=[]%>
+        <% dis= Data[ "Tamil Nadu"][ 'districtData']%>
+            <% for (const [key] of Object.entries(dis)) { %>
+                <%District.push(`${key}`) %>
+                    <%}%>
+                        <div>
+                            <table class=" table-hover table-striped table-responsive">
+                                <tr>
+                                    <th scope="col" class="head">District</th>
+                                    <th scope="col" class="head Confirmed">Confirmed</th>
+                                    <th scope="col" class="head Active">Active</th>
+                                    <th scope="col" class="head Recovered">Recovered</th>
+                                    <th scope="col" class="head">Death</th>
+                                </tr>
+                                <% District.forEach(function(x){ %>
+                                    <tr>
+                                        <th scope="row">
+                                            <%= x %>
+                                        </th>
+                                        <td>
+                                            <div class="confirm">
+                                                <% if(dis [ x ] ['delta'] ['confirmed']=='0'){ %>
+                                                    <p class="zero"></p>
+                                                    <%}else{%>
+                                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                                        <%=dis [ x ] ['delta'] ['confirmed']  %>
+                                                            <%} %>
+                                            </div>
+                                            <%= dis [ x ] ['confirmed'] %>
+                                        </td>
+                                        <td>
+                                            <%= dis [ x ] ['active'] %>
+                                        </td>
+                                        <td>
+                                            <div class="recover">
+                                                <% if(dis [ x ] ['delta'] ['recovered']=='0'){ %>
+                                                    <p></p>
+                                                    <%}else{%>
+                                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                                        <%=dis [ x ] ['delta'] ['recovered']  %>
+                                                            <%} %>
+                                            </div>
+                                            <%= dis [ x ] ['recovered'] %>
+                                        </td>
+                                        <td>
+                                            <div class="dece">
+                                                <% if(dis [ x ] ['delta'] ['deceased']=='0'){ %>
+                                                    <p></p>
+                                                    <%}else{%>
+                                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                                        <%=dis [ x ] ['delta'] ['deceased']  %>
+                                                            <%} %>
+                                            </div>
+                                            <%= dis [ x ] ['deceased'] %>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                            </table>
+
+
+
+                            <!--
+                                <% district=Data[ "Tamil Nadu"][ 'districtData'] %>
+                                    <div class="container-fluid">
+                                        <table class=" table-hover table-striped table-responsive">
+                                            <tr>
+                                                <th scope="col" class="head">District</th>
+                                                <th scope="col" class="head ">Confirmed</th>
+                                                <th scope="col" class="head">Active</th>
+                                                <th scope="col" class="head">Recovered</th>
+                                                <th scope="col" class="head">Death</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Chennai</th>
+                                                <td>
+                                                    <% a= JSON.stringify(district['Chennai']['delta']['confirmed']) %>
+                                                        <% if(a=='0'){ %>
+                                                            <p>
+                                                            </p>
+                                                            <%} else{%>
+                                                                <div class="confirm">
+                                                                    <span class="glyphicon glyphicon-arrow-up"></span>
+                                                                    <%= a %>
+                                                                </div>
+                                                                <% }%>
+
+                                                                    <%- JSON.stringify(district['Chennai']['confirmed']) %>
+                                                </td>
+                                                <td>
+                                                    <%- JSON.stringify(district['Chennai']['active']) %>
+                                                </td>
+                                                <td>
+                                                    <% a= JSON.stringify(district['Chennai']['delta']['recovered']) %>
+                                                        <% if(a=='0'){ %>
+                                                            <p>
+                                                            </p>
+                                                            <%} else{%>
+                                                                <div class="recover">
+                                                                    <span class="glyphicon glyphicon-arrow-up"></span>
+                                                                    <%= a %>
+                                                                </div>
+                                                                <% }%>
+
+                                                                    <%- JSON.stringify(district['Chennai']['recovered']) %>
+                                                </td>
+                                                <td>
+                                                    <% a= JSON.stringify(district['Chennai']['delta']['deceased']) %>
+                                                        <% if(a=='0'){ %>
+                                                            <p>
+                                                            </p>
+                                                            <%} else{%>
+                                                                <div class="dece">
+                                                                    <span class="glyphicon glyphicon-arrow-up"></span>
+                                                                    <%= a %>
+                                                                </div>
+                                                                <% }%>
+
+                                                                    <%- JSON.stringify(district['Chennai']['deceased']) %>
+                                                </td>
+                                            </tr> -->
+                            <%- include("./partials/footer.ejs") %>

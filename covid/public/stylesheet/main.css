@@ -1,0 +1,163 @@
+body {
+    background-color: #bdbdbd;
+}
+
+.container {
+    margin-top: 1%;
+}
+
+td {
+    vertical-align: bottom;
+}
+
+table,
+th,
+td {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    padding-left: 3%;
+    border-radius: 7px;
+    margin: 4px;
+}
+
+table {
+    width: 90%;
+    height: 100%;
+    background-color: rgba(243, 237, 237, 0.849);
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    border-radius: 17px;
+}
+
+th {
+    height: 150%;
+    border-radius: 7px;
+}
+
+.Recovered {
+    color: #28a745;
+}
+
+.Active {
+    color: #007bff;
+}
+
+.Confirmed {
+    color: #ff073a;
+}
+
+.recover {
+    font-size: 80%;
+    color: #28a745;
+}
+
+.confirm {
+    font-size: 80%;
+    color: #ff073a;
+}
+
+.dece {
+    font-size: 80%;
+}
+
+.glyphicon {
+    font-size: 80%;
+    font-weight: 0%;
+}
+
+.banner {
+    width: 50%;
+    height: 0%;
+}
+
+.head {
+    background-color: rgb(214, 214, 214);
+}
+
+.zero {
+    margin-top: 8%;
+}
+
+img {
+    height: 20%;
+    margin-left: 5%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container>div {
+    width: 150px;
+    height: 150%;
+    margin: 10px;
+    margin-top: 1%;
+    margin-left: 7%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.mcon {
+    margin-bottom: 0;
+    font-size: 50%;
+    color: #a10424;
+}
+
+.con {
+    background-color: rgba(255, 7, 57, 0.26);
+    border-radius: 17px;
+    width: 100%;
+}
+
+.mrec {
+    margin-bottom: 0;
+    font-size: 50%;
+    color: #008a20;
+}
+
+.rec {
+    background-color: rgba(40, 167, 70, 0.171);
+    border-radius: 17px;
+    width: 100%;
+}
+
+.mdec {
+    margin-bottom: 0;
+    font-size: 50%;
+}
+
+.dec {
+    background-color: rgba(108, 117, 125, 0.336);
+    border-radius: 17px;
+    width: 100%;
+}
+
+.mtes {
+    margin-bottom: 0;
+    font-size: 50%;
+    color: rgb(13, 0, 255);
+    font-weight: 900%;
+}
+
+.tes {
+    background-color: rgba(33, 26, 162, 0.247);
+    border-radius: 17px;
+    width: 100%;
+}
+
+.Time {
+    color: blue;
+    margin-left: 5%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.headtn {
+    color: blue;
+    margin-left: 0px;
+    font-size: 90%;
+}
