@@ -27,7 +27,8 @@ table {
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 1%;
-    border-radius: 17px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 3px grey;
 }
 
 th {
@@ -148,8 +149,9 @@ img {
 }
 
 .Time {
-    color: blue;
+    color: rgb(3, 3, 114);
     margin-left: 5%;
+    font-weight: bold;
 }
 
 .heading {
@@ -160,4 +162,19 @@ img {
     color: blue;
     margin-left: 0px;
     font-size: 90%;
+}
+
+#tcon {
+    font-size: 55%;
+    color: red;
+}
+
+#trec {
+    font-size: 55%;
+    color: green;
+}
+
+#tdec {
+    font-size: 55%;
+    margin-top: 0%;
 }
