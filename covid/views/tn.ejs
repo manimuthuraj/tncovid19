@@ -5,11 +5,13 @@
     </h1>
     <div>
         <p class="Time">
-            <% var ldate=sData.TN.meta.last_updated%>
+            <!-- <% var ldate=sData.TN.meta.last_updated%>
                 <%var ld= Date.parse(ldate)%>
                     <%var d = new Date(ld);%>
                         Last updated:
-                        <%=d%>
+                        <%=d%>-->
+            Last updated:
+            <%=tData.statewise[2].lastupdatedtime%>
         </p>
     </div>
 
@@ -18,6 +20,10 @@
             <p class="mcon">confirmed</p>
             <%=JSON.stringify(sData.TN.total.confirmed)%>
         </div>
+        <div class="tes">
+            <p class="mtes">Active</p>
+            <%=tData.statewise[2].active%>
+        </div>
         <div class="rec">
             <p class="mrec">Recovered</p>
             <%=JSON.stringify(sData.TN.total.recovered)%>
@@ -25,10 +31,6 @@
         <div class="dec">
             <p class="mdec">Deceased</p>
             <%=JSON.stringify(sData.TN.total.deceased)%>
-        </div>
-        <div class="tes">
-            <p class="mtes">Tested</p>
-            <%=JSON.stringify(sData.TN.total.tested)%>
         </div>
     </div>
 
