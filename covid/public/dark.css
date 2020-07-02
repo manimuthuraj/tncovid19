@@ -1,0 +1,190 @@
+body {
+    background-color: #161625!important;
+}
+
+.container {
+    margin-top: 1%;
+}
+
+td {
+    vertical-align: bottom;
+}
+
+table,
+th,
+td {
+    border: 1px solid #2d2d41;
+    border-bottom: 1px solid #3b3b57;
+    border-collapse: collapse;
+    padding-left: 3%;
+    margin: 4px;
+    background-color: #2d2d41;
+    color: rgb(133, 123, 207);
+}
+
+table {
+    width: 90%;
+    height: 100%;
+    background-color: #2d2d41;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    color: rgb(133, 123, 207);
+}
+
+th {
+    height: 150%;
+}
+
+.Recovered {
+    color: #28a745;
+}
+
+.Active {
+    color: #007bff;
+}
+
+.Confirmed {
+    color: #ff073a;
+}
+
+.recover {
+    font-size: 80%;
+    color: #28a745;
+}
+
+.confirm {
+    font-size: 80%;
+    color: #ff073a;
+}
+
+.dece {
+    font-size: 80%;
+}
+
+.glyphicon {
+    font-size: 80%;
+    font-weight: 0%;
+}
+
+.banner {
+    width: 50%;
+    height: 0%;
+}
+
+.head {
+    background-color: rgb(214, 214, 214);
+}
+
+.zero {
+    margin-top: 8%;
+}
+
+img {
+    height: 20%;
+    margin-left: 5%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container>div {
+    width: 150px;
+    height: 150%;
+    margin: 10px;
+    margin-top: 1%;
+    margin-left: 7%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.mcon {
+    margin-bottom: 0;
+    font-size: 50%;
+    color: #bb0529;
+    font-weight: 1500%;
+}
+
+.con {
+    background-color: rgba(255, 7, 57, 0.342);
+    border-radius: 17px;
+    width: 100%;
+    color: red;
+}
+
+.mrec {
+    margin-bottom: 0;
+    font-size: 50%;
+    color: #008a20;
+    font-weight: 1500%;
+}
+
+.rec {
+    background-color: rgba(40, 167, 70, 0.205);
+    border-radius: 17px;
+    width: 100%;
+    color: #28a745;
+}
+
+.mdec {
+    margin-bottom: 0;
+    font-size: 50%;
+    font-weight: 1500%;
+    color: rgb(133, 123, 207);
+}
+
+.dec {
+    background-color: rgba(108, 117, 125, 0.336);
+    border-radius: 17px;
+    width: 100%;
+    color: rgb(133, 123, 207);
+}
+
+.mtes {
+    margin-bottom: 0;
+    font-size: 50%;
+    color: rgb(13, 0, 255);
+    font-weight: 1500%;
+}
+
+.tes {
+    background-color: rgba(0, 123, 255, 0.158);
+    border-radius: 17px;
+    width: 100%;
+    color: blue;
+}
+
+.Time {
+    color: rgb(133, 123, 207);
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.heading {
+    text-align: center;
+    color: rgb(191, 187, 221);
+}
+
+.headtn {
+    color: blue;
+    margin-left: 0px;
+    font-size: 90%;
+}
+
+#tcon {
+    font-size: 55%;
+    color: red;
+}
+
+#trec {
+    font-size: 55%;
+    color: #28a745;
+}
+
+#tdec {
+    font-size: 55%;
+    margin-top: 0%;
+    color: rgb(133, 123, 207);
+}
