@@ -114,21 +114,14 @@
                             </table>
 
                             <script>
-                                // Select the button
                                 var but = document.getElementsByClassName("toggle");
-                                // Select the stylesheet <link>
                                 var theme = document.getElementById("theme");
 
-                                // Listen for a click on the button
                                 function my() {
-                                    // If the current URL contains "ligh-theme.css"
                                     if (theme.getAttribute("href") == "/public/stylesheet/main.css") {
-                                        // ... then switch it to "dark-theme.css"
                                         theme.href = "/public/dark.css";
                                         document.getElementById("toogle").innerHTML = "light mode"
-                                            // Otherwise...
                                     } else {
-                                        // ... switch it to "light-theme.css"
                                         theme.href = "/public/stylesheet/main.css";
                                         document.getElementById("toogle").innerHTML = "DarkMode"
                                     }
