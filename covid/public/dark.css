@@ -1,9 +1,18 @@
 body {
-    background-color: #161625!important;
+    background-color: #100e17;
+    color: white;
 }
 
 .container {
     margin-top: 1%;
+}
+
+.table-hover tbody tr:hover>th {
+    background-color: #251841;
+}
+
+.table-hover tbody tr:hover>td {
+    background-color: #251841;
 }
 
 td {
@@ -13,27 +22,27 @@ td {
 table,
 th,
 td {
-    border: 1px solid #2d2d41;
-    border-bottom: 1px solid #3b3b57;
+    border: 1px solid transparent;
     border-collapse: collapse;
     padding-left: 3%;
+    border-radius: 7px;
     margin: 4px;
-    background-color: #2d2d41;
-    color: rgb(133, 123, 207);
 }
 
 table {
     width: 90%;
     height: 100%;
-    background-color: #2d2d41;
+    background-color: #17141d;
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 1%;
-    color: rgb(133, 123, 207);
+    border-radius: 7px;
+    box-shadow: -1rem 0 3rem #000;
 }
 
 th {
     height: 150%;
+    border-radius: 7px;
 }
 
 .Recovered {
@@ -73,7 +82,7 @@ th {
 }
 
 .head {
-    background-color: rgb(214, 214, 214);
+    background-color: #251841;
 }
 
 .zero {
@@ -103,68 +112,59 @@ img {
 .mcon {
     margin-bottom: 0;
     font-size: 50%;
-    color: #bb0529;
-    font-weight: 1500%;
+    color: #a10424;
 }
 
 .con {
-    background-color: rgba(255, 7, 57, 0.342);
+    background-color: rgba(255, 7, 57, 0.26);
     border-radius: 17px;
     width: 100%;
-    color: red;
 }
 
 .mrec {
     margin-bottom: 0;
     font-size: 50%;
     color: #008a20;
-    font-weight: 1500%;
 }
 
 .rec {
-    background-color: rgba(40, 167, 70, 0.205);
+    background-color: rgba(40, 167, 70, 0.171);
     border-radius: 17px;
     width: 100%;
-    color: #28a745;
 }
 
 .mdec {
     margin-bottom: 0;
     font-size: 50%;
-    font-weight: 1500%;
-    color: rgb(133, 123, 207);
 }
 
 .dec {
     background-color: rgba(108, 117, 125, 0.336);
     border-radius: 17px;
     width: 100%;
-    color: rgb(133, 123, 207);
 }
 
 .mtes {
     margin-bottom: 0;
     font-size: 50%;
     color: rgb(13, 0, 255);
-    font-weight: 1500%;
+    font-weight: 900%;
 }
 
 .tes {
-    background-color: rgba(0, 123, 255, 0.158);
+    background-color: rgba(33, 26, 162, 0.247);
     border-radius: 17px;
     width: 100%;
-    color: blue;
 }
 
 .Time {
-    color: rgb(133, 123, 207);
+    color: rgb(3, 3, 114);
     margin-left: 5%;
     font-weight: bold;
 }
 
 .heading {
     text-align: center;
-    color: rgb(191, 187, 221);
 }
 
 .headtn {
@@ -180,14 +180,14 @@ img {
 
 #trec {
     font-size: 55%;
-    color: #28a745;
+    color: green;
 }
 
 #tdec {
     font-size: 55%;
     margin-top: 0%;
-    color: rgb(133, 123, 207);
 }
+
 .state {
     align-items: center;
     background: rgba(255, 193, 7, 0.459);
