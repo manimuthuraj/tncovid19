@@ -2,7 +2,7 @@
 
     <h1 class="heading">Covid19
         <spanc class="headtn">TAMILNADU</span>
-            <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">DarkMode</button></span>
+            <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">LightMode</button></span>
     </h1>
 
     <a href="/state">
@@ -61,7 +61,7 @@
                 <%District.push(`${key}`) %>
                     <%}%>
                         <div>
-                            <table class=" table-hover table-striped table-responsive">
+                            <table class=" table-hover  table-responsive">
                                 <tr>
                                     <th scope="col" class="head">District</th>
                                     <th scope="col" class="head Confirmed">Confirmed</th>
@@ -114,6 +114,7 @@
                                     <% }) %>
                             </table>
                             <!--state wise-->
+
                             <!--State-->
                             <script>
                                 // Select the button
@@ -124,18 +125,19 @@
                                 // Listen for a click on the button
                                 function my() {
                                     // If the current URL contains "ligh-theme.css"
-                                    if (theme.getAttribute("href") == "/public/stylesheet/main.css") {
+                                    if (theme.getAttribute("href") == "/public/dark.css") {
                                         // ... then switch it to "dark-theme.css"
-                                        theme.href = "/public/dark.css";
-                                        document.getElementById("toogle").innerHTML = "light mode"
+                                        theme.href = "/public/stylesheet/main.css";
+                                        document.getElementById("toogle").innerHTML = "DarkMode"
                                             // Otherwise...
                                     } else {
                                         // ... switch it to "light-theme.css"
-                                        theme.href = "/public/stylesheet/main.css";
-                                        document.getElementById("toogle").innerHTML = "DarkMode"
+                                        theme.href = "/public/dark.css";
+                                        document.getElementById("toogle").innerHTML = "LightMode"
                                     }
                                 };
                             </script>
+
 
                             <!--
                                 <% district=Data[ "Tamil Nadu"][ 'districtData'] %>
@@ -196,4 +198,6 @@
                                                                     <%- JSON.stringify(district['Chennai']['deceased']) %>
                                                 </td>
                                             </tr> -->
+
+
                             <%- include("./partials/footer.ejs") %>
