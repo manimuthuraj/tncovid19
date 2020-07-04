@@ -1,0 +1,134 @@
+<%- include("./partials/header.ejs") %>
+    <h1 class="heading">Covid19
+        <spanc class="headtn">STATEWISE</span>
+            <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">DarkMode</button></span>
+    </h1>
+
+    <!--state wise-->
+
+    <div>
+        <p class="Time">
+            <svg aria-hidden="true" role="img" class="octicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg>            Last updated:
+            <%=tData.statewise[0].lastupdatedtime%>
+        </p>
+    </div>
+
+    <div class="flex-container">
+        <div class="con">
+            <p class="mcon">confirmed</p>
+            <%=tData.statewise[0].confirmed%>
+                <div id="tcon">+
+                    <% if(tData.statewise[0].deltaconfirmed==0){ %>
+                        <%}else{%>
+                            <%=tData.statewise[0].deltaconfirmed%>
+                                <%} %>
+                </div>
+        </div>
+        <div class="tes">
+            <p class="mtes">Active</p>
+            <%=tData.statewise[0].active%>
+        </div>
+        <div class="rec">
+            <p class="mrec">Recovered</p>
+            <%=tData.statewise[0].recovered%>
+                <div id="trec">+
+                    <% if(tData.statewise[0].deltarecovered==0){ %>
+                        <%}else{%>
+                            <%=tData.statewise[0].deltarecovered%>
+                                <%} %>
+                </div>
+        </div>
+        <div class="dec">
+            <p class="mdec">Deceased</p>
+            <%=tData.statewise[0].deaths%>
+                <div id="tdec">+
+                    <% if(tData.statewise[0].deltadeaths==0){ %>
+                        <%}else{%>
+                            <%=tData.statewise[0].deltadeaths%>
+                                <%} %>
+                </div>
+        </div>
+    </div>
+
+    <!--State-->
+    <% n = tData.statewise.length%>
+
+        <div>
+            <table class=" table-hover table-striped table-responsive">
+                <tr>
+                    <th scope="col" class="head">District</th>
+                    <th scope="col" class="head Confirmed">Confirmed</th>
+                    <th scope="col" class="head Active">Active</th>
+                    <th scope="col" class="head Recovered">Recovered</th>
+                    <th scope="col" class="head">Death</th>
+                </tr>
+                <% for (var element = 1; element < n; element++) { %>
+                    <tr>
+                        <th scope="row">
+                            <%= tData.statewise[element].state %>
+                        </th>
+                        <td>
+                            <div class="confirm">
+                                <% if(tData.statewise[element].deltaconfirmed==0){ %>
+                                    <p class="zero"></p>
+                                    <%}else{%>
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <%=tData.statewise[element].deltaconfirmed %>
+                                            <%} %>
+                            </div>
+                            <%= tData.statewise[element].confirmed %>
+                        </td>
+                        <td>
+                            <%= tData.statewise[element].active %>
+                        </td>
+                        <td>
+                            <div class="recover">
+                                <% if(tData.statewise[element].deltarecovered==0){ %>
+                                    <p></p>
+                                    <%}else{%>
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <%=tData.statewise[element].deltarecovered %>
+                                            <%} %>
+                            </div>
+                            <%= tData.statewise[element].recovered %>
+                        </td>
+                        <td>
+                            <div class="dece">
+                                <% if(tData.statewise[element].deltadeaths==0){ %>
+                                    <p></p>
+                                    <%}else{%>
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <%=tData.statewise[element].deltadeaths %>
+                                            <%} %>
+                            </div>
+                            <%= tData.statewise[element].deaths %>
+                        </td>
+                    </tr>
+                    <% }%>
+            </table>
+        </div>
+
+
+
+        <script>
+            // Select the button
+            var but = document.getElementsByClassName("toggle");
+            // Select the stylesheet <link>
+            var theme = document.getElementById("theme");
+
+            // Listen for a click on the button
+            function my() {
+                // If the current URL contains "ligh-theme.css"
+                if (theme.getAttribute("href") == "/public/stylesheet/main.css") {
+                    // ... then switch it to "dark-theme.css"
+                    theme.href = "/public/dark.css";
+                    document.getElementById("toogle").innerHTML = "light mode"
+                        // Otherwise...
+                } else {
+                    // ... switch it to "light-theme.css"
+                    theme.href = "/public/stylesheet/main.css";
+                    document.getElementById("toogle").innerHTML = "DarkMode"
+                }
+            };
+        </script>
+        <%- include("./partials/footer.ejs") %>
