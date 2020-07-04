@@ -147,7 +147,7 @@ img {
 .mtes {
     margin-bottom: 0;
     font-size: 50%;
-    color: rgb(13, 0, 255);
+    color: #007bff;
     font-weight: 900%;
 }
 
@@ -158,7 +158,7 @@ img {
 }
 
 .Time {
-    color: rgb(3, 3, 114);
+    color: #28a745;
     margin-left: 5%;
     font-weight: bold;
 }
