@@ -5,14 +5,15 @@
             <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">DarkMode</button></span>
     </h1>
 
+    <a href="/state">
+        <div class="state pull-right">
+            <svg aria-hidden="true" role="img" class="octicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z"></path></svg>            see statewise details
+        </div>
+    </a>
+
     <div>
         <p class="Time">
-            <!-- <% var ldate=sData.TN.meta.last_updated%>
-                <%var ld= Date.parse(ldate)%>
-                    <%var d = new Date(ld);%>
-                        Last updated:
-                        <%=d%>-->
-            Last updated:
+            <svg aria-hidden="true" role="img" class="octicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg>            Last updated:
             <%=tData.statewise[2].lastupdatedtime%>
         </p>
     </div>
@@ -23,7 +24,7 @@
             <%=JSON.stringify(sData.TN.total.confirmed)%>
                 <div id="tcon">
                     <% if(tData.statewise[2].deltaconfirmed==0){ %>
-                        <%}else{%>
+                        <%}else{%>+
                             <%=tData.statewise[2].deltaconfirmed%>
                                 <%} %>
                 </div>
@@ -37,7 +38,7 @@
             <%=JSON.stringify(sData.TN.total.recovered)%>
                 <div id="trec">
                     <% if(tData.statewise[2].deltarecovered==0){ %>
-                        <%}else{%>
+                        <%}else{%>+
                             <%=tData.statewise[2].deltarecovered%>
                                 <%} %>
                 </div>
@@ -47,7 +48,7 @@
             <%=JSON.stringify(sData.TN.total.deceased)%>
                 <div id="tdec">
                     <% if(tData.statewise[2].deltadeaths==0){ %>
-                        <%}else{%>
+                        <%}else{%>+
                             <%=tData.statewise[2].deltadeaths%>
                                 <%} %>
                 </div>
@@ -112,16 +113,24 @@
                                     </tr>
                                     <% }) %>
                             </table>
-
+                            <!--state wise-->
+                            <!--State-->
                             <script>
+                                // Select the button
                                 var but = document.getElementsByClassName("toggle");
+                                // Select the stylesheet <link>
                                 var theme = document.getElementById("theme");
 
+                                // Listen for a click on the button
                                 function my() {
+                                    // If the current URL contains "ligh-theme.css"
                                     if (theme.getAttribute("href") == "/public/stylesheet/main.css") {
+                                        // ... then switch it to "dark-theme.css"
                                         theme.href = "/public/dark.css";
                                         document.getElementById("toogle").innerHTML = "light mode"
+                                            // Otherwise...
                                     } else {
+                                        // ... switch it to "light-theme.css"
                                         theme.href = "/public/stylesheet/main.css";
                                         document.getElementById("toogle").innerHTML = "DarkMode"
                                     }
