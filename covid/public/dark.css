@@ -188,3 +188,16 @@ img {
     margin-top: 0%;
     color: rgb(133, 123, 207);
 }
+.state {
+    align-items: center;
+    background: rgba(255, 193, 7, 0.459);
+    border-radius: 5px;
+    color: #ff0000;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    padding: .75rem;
+    width: 15%;
+    height: 10%;
+}
