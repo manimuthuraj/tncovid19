@@ -1,15 +1,14 @@
 <%- include("./partials/header.ejs") %>
-
+    <div class="navbar">
+        <a href="/" class="active">TamilNadu</a>
+        <a href="/state">statewise</a>
+        <a href="/about">About</a>
+        <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">LightMode</button></span>
+        <a class="title" href="/">Covid19<span class="TAMIL">TAMILNADU</span></a>
+    </div>
     <h1 class="heading">Covid19
         <spanc class="headtn">TAMILNADU</span>
-            <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">LightMode</button></span>
     </h1>
-
-    <a href="/state">
-        <div class="state pull-right">
-            <svg aria-hidden="true" role="img" class="octicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z"></path></svg>            see statewise details
-        </div>
-    </a>
 
     <div>
         <p class="Time">
@@ -119,19 +118,13 @@
                             <script>
                                 // Select the button
                                 var but = document.getElementsByClassName("toggle");
-                                // Select the stylesheet <link>
                                 var theme = document.getElementById("theme");
 
-                                // Listen for a click on the button
                                 function my() {
-                                    // If the current URL contains "ligh-theme.css"
                                     if (theme.getAttribute("href") == "/public/dark.css") {
-                                        // ... then switch it to "dark-theme.css"
                                         theme.href = "/public/stylesheet/main.css";
                                         document.getElementById("toogle").innerHTML = "DarkMode"
-                                            // Otherwise...
                                     } else {
-                                        // ... switch it to "light-theme.css"
                                         theme.href = "/public/dark.css";
                                         document.getElementById("toogle").innerHTML = "LightMode"
                                     }
