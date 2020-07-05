@@ -1,7 +1,13 @@
 <%- include("./partials/header.ejs") %>
+    <div class="navbar">
+        <a href="/">TamilNadu</a>
+        <a href="/state" class="active">statewise</a>
+        <a href="/about">About</a>
+        <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">LightMode</button></span>
+        <a class="title" href="/">Covid19<span class="TAMIL">TAMILlNADU</span></a>
+    </div>
     <h1 class="heading">Covid19
         <spanc class="headtn">STATEWISE</span>
-            <span> <button class="btn btn-primary btn-sm pull-right" id="toogle" onclick="my()">LightMode</button></span>
     </h1>
 
     <!--state wise-->
@@ -113,19 +119,13 @@
         <script>
             // Select the button
             var but = document.getElementsByClassName("toggle");
-            // Select the stylesheet <link>
             var theme = document.getElementById("theme");
 
-            // Listen for a click on the button
             function my() {
-                // If the current URL contains "ligh-theme.css"
                 if (theme.getAttribute("href") == "/public/dark.css") {
-                    // ... then switch it to "dark-theme.css"
                     theme.href = "/public/stylesheet/main.css";
                     document.getElementById("toogle").innerHTML = "DarkMode"
-                        // Otherwise...
                 } else {
-                    // ... switch it to "light-theme.css"
                     theme.href = "/public/dark.css";
                     document.getElementById("toogle").innerHTML = "LightMode"
                 }
