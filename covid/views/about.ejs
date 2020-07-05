@@ -1,0 +1,46 @@
+<%- include("./partials/header.ejs") %>
+    <link rel="stylesheet" href="/public/stylesheet/about.css">
+    <div class="navbar">
+        <a href="/">TamilNadu</a>
+        <a href="/state">Statewise</a>
+        <a href="/about" class="active">About</a>
+        <a class="title" href="/">Covid19<span class="TAMIL">TAMILNADU</span></a>
+    </div>
+
+
+    <div class="card-container">
+        <div class="card">
+            <header class="article-header">
+                <h2 class="article-title">
+                    Covid19TAMILNADU
+                </h2>
+                <P>
+                    This website is created by Manimuthuraj to <br> get daily update of Covid19
+                </P>
+            </header>
+            <div class="author">
+                <div class="info">
+                    <div class="caption">MaintainBy</div>
+                    <div class="name">Manimuthuraj.T</div>
+                </div>
+            </div>
+            <div class="tags">
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>BOOTSTRAP</div>
+                <div>Node js</div>
+                <div>Express</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <h5 class="ques">
+            Are you official?
+        </h5>
+        <p class="ans">No.</p>
+        <h5 class="ques">What are your sources of data?</h5>
+        <p class="ans">Im getting data from API <a href="api.covid19india.org">api.covid19india.org</a> <br> All the data is available through an API for further analysis and development here : <a href="api.covid19india.org">api.covid19india.org </a></p>
+    </div>
+    <%- include("./partials/footer.ejs") %>
